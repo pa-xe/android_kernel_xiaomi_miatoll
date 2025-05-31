@@ -34,6 +34,11 @@
 #undef pr_debug
 #define dev_dbg dev_err
 #define pr_debug pr_err
+#else
+#undef dev_info
+#undef pr_info
+#define dev_info dev_dbg
+#define pr_info pr_debug
 #endif
 /*part of charger mode function*/
 
